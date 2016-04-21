@@ -9,12 +9,11 @@ var assert = require('core-assert'),
 
 
 function uni_test(fn, sradix, dradix, args, expect) {
-	test(fn.name+'('+json.js2str(args, sradix)+') -> '+json.js2str(expect, dradix)+'', function (done) {
-		(args instanceof Array ? fn.apply(null, args) : fn.call(null, args))
+	test(fn.name+'('+json.js2str(args, sradix)+') -> '+json.js2str(expect, dradix)+'', function () {
+		return (args instanceof Array ? fn.apply(null, args) : fn.call(null, args))
 			.then(function (ret) {
 				assert.deepStrictEqual(ret, expect);
-				done();
-			}).catch(done);
+			});
 	});
 }
 
