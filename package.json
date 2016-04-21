@@ -1,7 +1,7 @@
 {
   "name": "nano-dirfs",
-  "version": "1.0.0",
-  "description": "A minimal mock(in-memory) file system module for my projects (like nano-mill)",
+  "version": "1.0.1",
+  "description": "A minimal real file system module for nano-sched-fs",
   "main": "dirfs.js",
   "scripts": {
     "test": "mocha --reporter spec -u tdd",
